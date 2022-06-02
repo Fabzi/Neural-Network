@@ -10,7 +10,7 @@ OBJECTS       := $(patsubst %,$(BUILDDIR)/%,${SOURCES:.cpp=.o})
 #DIRS := $(find * -type f -name "*.cpp" | grep -v ScoopyArduino)
 DEP := $(shell find $(BUILDDIR)/* -name *.d)
 
-.DEFAULT_GOAL := bin
+.DEFAULT_GOAL := all
 .PHONY: clean bin all run
 
 -include $(DEP)
